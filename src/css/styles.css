@@ -1,3 +1,13 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+@import url('./reset.css');
+@import url('./vite-promo.css');
+@import url('./header.css');
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -13,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+/* Task - 1 */
+
 .value,
 .label {
   display: block;
@@ -106,4 +119,80 @@
   font-weight: 400;
   line-height: 1.5em; /* 150% */
   text-transform: uppercase;
+}
+
+/* Task - 2 */
+
+#delay:hover,
+fieldset:hover,
+fieldset:active {
+  border: 1px solid #000;
+}
+
+#delay:active {
+  border: 1px solid #4e75ff;
+}
+
+button {
+  display: flex;
+  width: 360px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5em; /* 150% */
+  letter-spacing: 0.04em;
+  margin-top: 24px;
+}
+
+button:hover {
+  background: #6c8cff;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 64px;
+  flex-shrink: 0;
+  stroke-width: 1px;
+  stroke: #808080;
+  gap: 48px;
+  padding: 0;
+}
+
+label,
+legend {
+  color: #2e2f42;
+  font-family: Montserrat;
+  letter-spacing: 0.64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em; /* 150% */
+}
+
+legend {
+  letter-spacing: 0.04em;
+}
+
+label:has(input[type='number']) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input[type='number'] {
+  width: 360px;
+  height: 40px;
+  flex-shrink: 0;
 }
